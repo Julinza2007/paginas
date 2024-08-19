@@ -1,48 +1,82 @@
 body{
-    background-color: gray;
+   background-color: black;
+   font-family: sans-serif;
 }
 
-p#ej{
+.container {
+    inset: 0;
+    position: fixed;
+    z-index: -1;
+  }
+  
+  .space {
+    --size: 2px;
+    --space-layer: 
+      4vw 50vh 0 #fff,
+      18vw 88vh 0 #fff,
+      73vw 14vh 0 #fff;
     
-    font-family: sans-serif;
-    background-color: aqua;
-    border-radius: 10px;
-    border : 2px solid black;
-    padding : 10px;
-    font-weight: bold;
-}
-div#desplegable{
-    margin-left: 500px;
+    width: var(--size);
+    height: var(--size);
+    background: white;
+    box-shadow: var(--space-layer);
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0.75;
+  }
+  
+  .space {
+     animation: move var(--duration) linear infinite;
+  }
+  
+  @keyframes move {
+    from { transform: translateY(0); }
+    to { transform: translateY(-100vh); }
+  }
+
+  div#desplegable {
     margin-top: 50px;
-}
-
-div#desplegable img#img{
-    transition: 0.20s ease;
-}
-
-div#desplegable img#img:hover{
+    text-align: center;
+  }
+  
+  div#desplegable img#img{
     cursor: pointer;
+    transition: transform 0.5s ease;
+    margin-bottom: 25px;
+  }
+  
+  div#desplegable img#img:hover {
+    transform: scale(1.3);
+  }
+
+  div#desplegable div#menu{
+   text-align: center;
+  }
+  
+  div#desplegable div#menu p{
+    text-align: center;
+    border-radius: 10px;
+    background-color: skyblue;
+    margin: 0 40% 10px 40%;
+    padding-bottom: 4px;
+    font-size: 1.9em;
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.5);
+    transition: transform 0.5s ease;
+  }
+  
+  div#desplegable div#menu p:hover {
+    background-color: orangered;
+    border: 1px solid black;
+    box-shadow: 10px 10px 10px rgba(255, 68, 0, 0.546);  
     transform: scale(1.2);
-}
- div#menu p{
-    font-family: sans-serif;
-    border: 5px solid orange;
-    border-radius: 5px;
-    padding: 5px;
-    margin-right: 725px;
-    background-color: whitesmoke;
-    transition: 0.5s ease;
-}
-
-div#menu p:hover{
-    background-color: yellow;
-    border: 3px solid blue;
-    box-shadow: 1px 1px 8px blue;
-    transform: scale(1.1);
-}
-
-div#menu p a{
+  }
+  
+  div#desplegable div#menu p:hover a{
+    color: white;
+  }
+  
+  div#desplegable div#menu p a{
     text-decoration: none;
     color: black;
-    font-weight: bold;    
-}
+  }
