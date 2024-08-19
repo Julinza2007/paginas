@@ -47,7 +47,7 @@ function desplegar(event){
         let saludo= document.createElement('p');
         menu.append(saludo);
         saludoA = document.createElement('a');
-        saludoA.href = 'https://julinza2007.github.io/biograf-a/';
+        saludoA.href = 'https://www.youtube.com/@25julianmartinlinzalata4';
         saludoA.textContent = '?';
         saludo.style.textAlign = 'center';
         saludo.append(saludoA);
