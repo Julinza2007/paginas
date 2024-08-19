@@ -1,0 +1,48 @@
+body{
+    background-color: gray;
+}
+
+p#ej{
+    
+    font-family: sans-serif;
+    background-color: aqua;
+    border-radius: 10px;
+    border : 2px solid black;
+    padding : 10px;
+    font-weight: bold;
+}
+div#desplegable{
+    margin-left: 500px;
+    margin-top: 50px;
+}
+
+div#desplegable img#img{
+    transition: 0.20s ease;
+}
+
+div#desplegable img#img:hover{
+    cursor: pointer;
+    transform: scale(1.2);
+}
+ div#menu p{
+    font-family: sans-serif;
+    border: 5px solid orange;
+    border-radius: 5px;
+    padding: 5px;
+    margin-right: 725px;
+    background-color: whitesmoke;
+    transition: 0.5s ease;
+}
+
+div#menu p:hover{
+    background-color: yellow;
+    border: 3px solid blue;
+    box-shadow: 1px 1px 8px blue;
+    transform: scale(1.1);
+}
+
+div#menu p a{
+    text-decoration: none;
+    color: black;
+    font-weight: bold;    
+}
